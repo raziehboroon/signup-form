@@ -4,6 +4,7 @@ import validate from "./validate";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import notify from "./toast";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [data, setData] = useState({
@@ -18,7 +19,7 @@ const SignUp = () => {
   const [touched, setTouched] = useState({});
 
   useEffect(() => {
-    setErrors(validate(data));
+    setErrors(validate(data, "signup"));
   }, [data]);
 
   const changeHandler = (event) => {
@@ -145,7 +146,8 @@ const SignUp = () => {
           )}
         </div>
         <div className={styles.formButtons}>
-          <a href="#login">Login</a>
+          <Link to="/login">Login</Link>
+          {/* <a href="#login">Login</a> */}
           <button type="submit">Sign Up</button>
         </div>
       </form>
