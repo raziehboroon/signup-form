@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Login.module.css";
+import styles from "./SignUp.module.css";
 import validate from "./validate";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import notify from "./toast";
 
-const Login = () => {
+const SignUp = () => {
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -155,4 +155,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
